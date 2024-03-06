@@ -12,6 +12,7 @@ TagManager:
   - EnemyNavPoint
   - Environment
   - Battery
+  - Powerup
   layers:
   - Default
   - TransparentFX
