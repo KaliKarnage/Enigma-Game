@@ -49,11 +49,10 @@ public class PlayerMovementAudio : MonoBehaviour
         lastInputVector = currentInputVector;
     }
 
-    // Placeholder for the method that should return the combined input vector from both controllers
+    
     Vector2 GetInputVector()
     {
-        // Your code here to retrieve the Vector2 input from both controllers
-        // This will be specific to how your project handles input, so please adjust accordingly
+        
         return Vector2.zero;
     }
 }
