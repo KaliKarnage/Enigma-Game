@@ -5,11 +5,17 @@ public class XRRigController : MonoBehaviour
 {
     [SerializeField] private GameObject[] objectivePanels;
     [SerializeField] private DoorController doorController;
-    private int batteryCount = 0;
+    [SerializeField]private int batteryCount = 0;
 
+    [SerializeField]private bool maskEquipped = false;
     public int BatteryCount
     {
         get { return batteryCount; }
+    }
+
+    public bool MaskEquipped
+    {
+        get { return maskEquipped; }
     }
 
     void Start()
@@ -44,6 +50,12 @@ public class XRRigController : MonoBehaviour
                 objectivePanels[1].SetActive(true);
                 StartCoroutine(DeactivatePanelAfterDelay(1, 5));
             }
+        }
+
+        if (other.CompareTag("GasMask"))
+        {
+            maskEquipped = true;
+            other.gameObject.SetActive(false);
         }
     }
 

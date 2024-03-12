@@ -32,6 +32,12 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage(int damage)
     {
         playerHealth -= damage;
+        Debug.Log("Player took damage. Current health: " + playerHealth);
+
+        if (playerHealth <= 0)
+        {
+            Die();
+        }
     }
 
     private void Die()

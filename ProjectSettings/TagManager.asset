@@ -13,6 +13,7 @@ TagManager:
   - Environment
   - Battery
   - Powerup
+  - GasMask
   layers:
   - Default
   - TransparentFX
